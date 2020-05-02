@@ -3,6 +3,7 @@ echo Welcome to Employee Wage Computation Program
 isparttime=1;
 isfulltime=2;
 wageperhour=20;
+
 empcheck=$(( $RANDOM%3 ));
 case $empcheck in
 	$isfulltime)
@@ -17,3 +18,5 @@ case $empcheck in
 esac
 	salary=$(( $emphours*$wageperhour ));
 echo $salary
+monthlywages=$(( $salary*20 ))
+echo monthly wages are $monthlywages
