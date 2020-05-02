@@ -1,7 +1,9 @@
 #!/bin/bash -x
 echo Welcome to Employee Wage Computation Program
 ispresent=1;
-dailywage=160;
+wageperhour=20;
+fullday=8
+dailywage=$(( $wageperhour * $fullday ));
 salary=0;
 counter=0;
 for (( count=0; count<=10; count++ ))
