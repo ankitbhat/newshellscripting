@@ -1,0 +1,29 @@
+#!/bin/bash -x
+echo Welcome to Employee Wage Computation Program
+isparttime=1;
+isfulltime=2;
+wageperhour=20;
+counter=0;
+totalhours=0;
+salary=0;
+while [[ $(( $counter<=20 )) || $(( $totalhours<=100 )) ]]
+do
+empcheck=$(( $RANDOM%3 ));
+case $empcheck in
+	$isfulltime)
+	 	emphours=8
+		;;
+	$isparttime)
+		emphours=4
+		;;
+	*)
+	emphours=0
+		;;
+esac
+	counter=$(( $counter+1 ))
+	salary=$(( $salary+ (($emphours*$wagepetotalhours=$(( $counter*$emphours ));
+done
+echo $salary
+monthlywages=$(( $salary*20 ))
+echo monthly wages are $monthlywages
+
